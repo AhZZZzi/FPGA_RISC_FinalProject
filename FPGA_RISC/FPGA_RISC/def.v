@@ -1,0 +1,16 @@
+`define ALU_NONE                                5'b00000
+`define ALU_SHIFTL                              5'b00001
+`define ALU_SHIFTR                              5'b00010
+`define ALU_SHIFTR_ARITH                        5'b00011
+`define ALU_ADD                                 5'b00100
+`define ALU_SUB                                 5'b00110
+`define ALU_AND                                 5'b00111
+`define ALU_OR                                  5'b01000
+`define ALU_XOR                                 5'b01001
+`define ALU_LESS_THAN                           5'b01010
+`define ALU_LESS_THAN_SIGNED                    5'b01011
+`define ALU_GREATER_THAN_OR_EQUAL               5'b01100
+`define ALU_GREATER_THAN_OR_EQUAL_SIGNED        5'b01101
+`define ALU_EQUAL                               5'b01110
+`define ALU_NOT_EQUAL                           5'b01111
+`define ALU_LOAD_UPPER                          5'b10000

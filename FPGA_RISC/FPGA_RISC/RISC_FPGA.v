@@ -1,0 +1,59 @@
+module RISC_FPGA (KEY,SW,CLOCK_50,LCD_ON,LCD_BLON, LCD_RW, LCD_EN, LCD_RS, LCD_DATA,HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,HEX6,HEX7,LEDR);
+	input CLOCK_50;
+	input [1:0] KEY;
+	input [7:0] SW;
+	output LCD_ON;
+	output LCD_BLON;
+	output LCD_RW;
+	output LCD_EN;
+	output LCD_RS;
+	inout  [7:0] LCD_DATA;
+	output [17:0]LEDR;
+	output [0:6]HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,HEX6,HEX7;
+	
+	wire debounce_clk;
+	assign LEDR[13:3] = 11'b00000000000;
+	wire [1:0] ForwardAE, ForwardBE;
+	wire StallD, StallF,FlushE,FlushD;
+	wire BranchE,JumpE,JumpRE,PCSrcE;
+	wire [31:0] ALU_outE,PC_nowE,PCTargetE,WriteDataE,ReadDataM,Rs1E,Rs1Ext,Rs2E,Rs2Ext,Rs3E,Rs3Ext;
+	wire [31:0]hex_out;
+	wire chosen_clk;
+	wire gen_clk;
+	
+	
+	generate_clk            DUT0(CLOCK_50, gen_clk);
+	mux2_1_1bit					choose_clk(SW[7],debounce_clk,gen_clk,chosen_clk);
+	debounce_better_version debounce1(KEY[0],CLOCK_50,debounce_clk);
+	RiscV_Datapath 			DUT(chosen_clk,KEY[1],ForwardAE,ForwardBE,StallF,StallD,FlushE,FlushD,LEDR[17],LEDR[16],LEDR[15],LEDR[14],PC_nowE,Rs1E,Rs2E,RdE,PCTargetE,ReadDataM,WriteDataE,ALU_outE);
+	hazard_detect 				DUT1(ForwardAE,ForwardBE,StallD,StallF,FlushD,FlushE,LEDR[0],LEDR[1],LEDR[2]);
+	choose_output				DUT2(SW[6:0],PC_nowE,RdE,Rs1E,Rs2E,PCTargetE,ReadDataM,WriteDataE,ALU_outE,hex_out);
+	b2d_ssd 						C1(hex_out[31:28], HEX7);
+	b2d_ssd 						C2(hex_out[27:24], HEX6);
+	b2d_ssd 						C3(hex_out[23:20], HEX5);
+	b2d_ssd 						C4(hex_out[19:16], HEX4);
+	b2d_ssd 						C5(hex_out[15:11], HEX3);
+	b2d_ssd 						C6(hex_out[10:7], HEX2);
+	b2d_ssd 						C7(hex_out[7:4], HEX1);
+	b2d_ssd 						C8(hex_out[3:0], HEX0);
+	
+	wire DLY_RST;
+	reset_delay r0(	.iCLK(CLOCK_50),.oRESET(DLY_RST) );
+
+
+	// turn LCD ON
+	assign	LCD_ON		=	1'b1;
+	assign	LCD_BLON	   =	1'b1;
+
+
+	LCD_message  mess_01( .iCLK(CLOCK_50), .iRST_N(DLY_RST), .LCD_DATA(LCD_DATA), .LCD_RW(LCD_RW), .LCD_EN(LCD_EN), .LCD_RS(LCD_RS));
+endmodule
+
+
+
+module mux2_1_1bit (input sel, input in1, input in2, output mux_out);
+    assign mux_out = sel ? (in2):(in1);
+endmodule
+
+
+

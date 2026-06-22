@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri May 29 10:00:11 2026
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Full Version
+Revision Name : RISC_FPGA
+Top-level Entity Name : RISC_FPGA
+Family : Cyclone II
+Device : EP2C35F672C6
+Timing Models : Final
+Total logic elements : 1,820 / 33,216 ( 5 % )
+    Total combinational functions : 1,769 / 33,216 ( 5 % )
+    Dedicated logic registers : 600 / 33,216 ( 2 % )
+Total registers : 600
+Total pins : 98 / 475 ( 21 % )
+Total virtual pins : 0
+Total memory bits : 4,186 / 483,840 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 70 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

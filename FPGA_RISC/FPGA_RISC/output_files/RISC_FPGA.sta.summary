@@ -1,0 +1,161 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'SW[7]'
+Slack : -14.797
+TNS   : -16658.559
+
+Type  : Slow 1200mV 85C Model Setup 'RiscV_Datapath:DUT|F_to_D_register:comp2|InstrD[0]'
+Slack : -4.948
+TNS   : -23.584
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -3.237
+TNS   : -192.213
+
+Type  : Slow 1200mV 85C Model Hold 'SW[7]'
+Slack : 0.350
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.386
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'RiscV_Datapath:DUT|F_to_D_register:comp2|InstrD[0]'
+Slack : 1.005
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'SW[7]'
+Slack : -0.989
+TNS   : -29.670
+
+Type  : Slow 1200mV 85C Model Recovery 'CLOCK_50'
+Slack : -0.878
+TNS   : -11.367
+
+Type  : Slow 1200mV 85C Model Removal 'CLOCK_50'
+Slack : 0.981
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'SW[7]'
+Slack : 1.405
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SW[7]'
+Slack : -3.000
+TNS   : -4173.029
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -122.505
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RiscV_Datapath:DUT|F_to_D_register:comp2|InstrD[0]'
+Slack : 0.408
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'SW[7]'
+Slack : -13.472
+TNS   : -14922.049
+
+Type  : Slow 1200mV 0C Model Setup 'RiscV_Datapath:DUT|F_to_D_register:comp2|InstrD[0]'
+Slack : -4.509
+TNS   : -21.642
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -2.928
+TNS   : -167.747
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.339
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'SW[7]'
+Slack : 0.345
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'RiscV_Datapath:DUT|F_to_D_register:comp2|InstrD[0]'
+Slack : 1.106
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'SW[7]'
+Slack : -0.792
+TNS   : -23.760
+
+Type  : Slow 1200mV 0C Model Recovery 'CLOCK_50'
+Slack : -0.728
+TNS   : -8.854
+
+Type  : Slow 1200mV 0C Model Removal 'CLOCK_50'
+Slack : 0.862
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'SW[7]'
+Slack : 1.270
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SW[7]'
+Slack : -3.000
+TNS   : -4171.577
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -122.505
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RiscV_Datapath:DUT|F_to_D_register:comp2|InstrD[0]'
+Slack : 0.386
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'SW[7]'
+Slack : -7.019
+TNS   : -7686.300
+
+Type  : Fast 1200mV 0C Model Setup 'RiscV_Datapath:DUT|F_to_D_register:comp2|InstrD[0]'
+Slack : -2.545
+TNS   : -12.232
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -1.022
+TNS   : -50.631
+
+Type  : Fast 1200mV 0C Model Hold 'SW[7]'
+Slack : 0.160
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.175
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'RiscV_Datapath:DUT|F_to_D_register:comp2|InstrD[0]'
+Slack : 0.241
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'SW[7]'
+Slack : 0.020
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'CLOCK_50'
+Slack : 0.051
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'CLOCK_50'
+Slack : 0.451
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'SW[7]'
+Slack : 0.687
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SW[7]'
+Slack : -3.000
+TNS   : -4952.795
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -124.409
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RiscV_Datapath:DUT|F_to_D_register:comp2|InstrD[0]'
+Slack : 0.411
+TNS   : 0.000
+
+------------------------------------------------------------
